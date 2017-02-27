@@ -14,7 +14,7 @@ descripcion:pedido de productos
 - Una dirección de facturación
 --------------------------------*/
 
-function Pedidos(Fecha, Cantidad, Precio, DireccionEntrega, DireccionFacturacion){
+function Pedidos(FechaPedido, Cantidad, Precio, DireccionEntrega, DireccionFacturacion){
 	this.FechaPedido = FechaPedido;
 	this.Cantidad = Cantidad;
 	this.Precio = Precio;
@@ -49,17 +49,32 @@ function Pedidos(Fecha, Cantidad, Precio, DireccionEntrega, DireccionFacturacion
 			this.getDireccionFacturacion = function (){
 				return this.DireccionFacturacion;
 			};
+
+
+			this.setFechaPedido = function() {
+				return this.FechaPedido;
+			};
+
+			/*cambiar la cantidad del pedido*/
+			this.setCantidad = function() {
+				return this.Cantidad;
+			};
+
+			/*cambiar el precio del pedido*/
+			this.setPrecio = function() {
+				return this.Precio;
+			};
+
 			/*cambiar la direccion de entrega del pedido*/
 			this.setDireccionEntrega = function (DireccionEntrega) {
 				this.DireccionEntrega = DireccionEntrega;
 			};
 
-
 			/*cambiar la direccion de facturacion del pedido*/
 			this.setDireccionFacturacion = function (DireccionFacturacion) {
 				this.DireccionEntrega = DireccionEntrega;
 			};
-	}
+	};
 }
 
 /*
